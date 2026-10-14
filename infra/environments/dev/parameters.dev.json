@@ -1,0 +1,8 @@
+{
+  "resourceGroupName": {
+    "value": "my-dev-rg"
+  },
+  "location": {
+    "value": "eastus"
+  }
+}

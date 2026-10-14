@@ -1,0 +1,8 @@
+{
+  "resourceGroupName": {
+    "value": "my-prod-rg"
+  },
+  "location": {
+    "value": "centralus"
+  }
+}
