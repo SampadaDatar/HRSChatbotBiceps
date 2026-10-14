@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 param resourceGroupName string
-param location string = 'eastus'
+param location string = 'westus'
 
 module rg '../modules/resourceGroup.bicep' = {
   name: 'deploy-rg-dev'
