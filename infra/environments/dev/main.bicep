@@ -9,8 +9,8 @@ param location string = 'westus2'
 @description('Business Unit')
 param businessUnit string = 'ITDPT'
 
-@description('Creation Date')
-param creationDate string = '2026-04-02'
+@description('Creation date (auto-generated)')
+param creationDate string = utcNow('yyyy-MM-dd')
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: resourceGroupName
