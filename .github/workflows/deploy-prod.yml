@@ -1,0 +1,20 @@
+name: Deploy Prod Environment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Azure Login
+      uses: azure/login@v2
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy Prod RG
+      run: |
+        az deployment sub create           --location centralus           --template-file infra/environments/prod/main.bicep           --parameters @infra/environments/prod/parameters.prod.json
